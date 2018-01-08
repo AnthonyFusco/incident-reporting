@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:enabled="true"
+        android:title="Connecté au foyer: Chez moi"
+        android:visible="true" />
+    <item
+        android:enabled="true"
+        android:title="Se déconnecter"
+        android:visible="true" />
+    <item
+        android:id="@+id/notification_menu_item"
+        android:checkable="true"
+        android:enabled="true"
+        android:title="Désactiver les notifications"
+        android:visible="true" />
+</menu>

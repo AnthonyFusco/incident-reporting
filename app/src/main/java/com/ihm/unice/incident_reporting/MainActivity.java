@@ -1,13 +1,16 @@
 package com.ihm.unice.incident_reporting;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.ihm.unice.incident_reporting.models.MenuBaseActivity;
+
+public class MainActivity extends MenuBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTitle("App signalisation");
         setContentView(R.layout.activity_main);
     }
+
 }
