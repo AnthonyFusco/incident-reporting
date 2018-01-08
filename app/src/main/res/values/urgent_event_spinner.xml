@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="urgent_event">
+        <item>Fuite de gaz</item>
+        <item>Inondation</item>
+        <item>Vol</item>
+    </string-array>
+</resources>
