@@ -3,7 +3,9 @@ package com.ihm.unice.incident_reporting;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-public class UrgentReportActivity extends AppCompatActivity {
+import com.ihm.unice.incident_reporting.models.MenuBaseActivity;
+
+public class UrgentReportActivity extends MenuBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
