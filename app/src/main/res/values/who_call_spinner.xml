@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="who_call">
+        <item>Numéro paramétré</item>
+        <item>Ne pas appeler</item>
+    </string-array>
+</resources>
