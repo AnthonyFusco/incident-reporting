@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ihm.unice.incident_reporting.models.MenuBaseActivity;
+import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
 
 public class MainActivity extends MenuBaseActivity {
 
@@ -23,11 +24,7 @@ public class MainActivity extends MenuBaseActivity {
 
         ListView listView = findViewById(R.id.listView);
 
-        List<Incident> dataModels = new ArrayList<>();
-        for (int i = 0; i < 30; i++) {
-            dataModels.add(new Incident(new User("Roberto" + i)));
-
-        }
+        List<Incident> dataModels = IncidentsRepository.getAllIncidents();
 
         CustomAdapter<Incident> adapter = new LastReportsAdapter(dataModels, getApplicationContext());
 
