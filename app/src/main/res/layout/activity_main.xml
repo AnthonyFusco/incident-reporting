@@ -33,4 +33,23 @@
         android:layout_above="@+id/listView"
         android:layout_alignStart="@+id/listView"
         android:text="Derniers incidents signalés" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text="Urgent"
+        android:onClick="onClickReportUrgentIncident"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/button"
+        android:layout_below="@+id/button"
+        android:text="Signaler"
+        android:onClick="onClickReportNormalIncident"/>
 </RelativeLayout>

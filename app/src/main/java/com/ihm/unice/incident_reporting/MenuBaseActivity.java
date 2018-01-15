@@ -16,6 +16,7 @@ public abstract class MenuBaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        showBackButton(true);
     }
 
     @Override
@@ -51,5 +52,12 @@ public abstract class MenuBaseActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    public void showBackButton(boolean show){
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(show);
+            getSupportActionBar().setDisplayShowHomeEnabled(show);
+        }
     }
 }

@@ -20,6 +20,7 @@ public class MainActivity extends MenuBaseActivity {
         super.onCreate(savedInstanceState);
         setTitle("App signalisation");
         setContentView(R.layout.activity_main);
+        showBackButton(false);
 
         ListView listView = findViewById(R.id.listView);
 
@@ -32,6 +33,16 @@ public class MainActivity extends MenuBaseActivity {
 
     public void onClickParametersUrgentIncident(View view){
         Intent intent = new Intent(this, ParametersActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickReportUrgentIncident(View view){
+        Intent intent = new Intent(this, UrgentReportActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickReportNormalIncident(View view){
+        Intent intent = new Intent(this, NormalReportActivity.class);
         startActivity(intent);
     }
 }

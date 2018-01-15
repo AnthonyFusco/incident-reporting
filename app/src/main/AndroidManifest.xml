@@ -18,7 +18,9 @@
 
         <activity android:name=".UrgentReportActivity" android:screenOrientation="portrait"/>
         <activity android:name=".NormalReportActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".ParametersActivity" android:screenOrientation="portrait">
+        <activity android:name=".ParametersActivity"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity">
         <!--<intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
