@@ -1,6 +1,8 @@
 package com.ihm.unice.incident_reporting;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -16,5 +18,11 @@ public class UrgentReportActivity extends MenuBaseActivity {
                 R.array.urgent_event, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+    }
+
+    public void onClickSignalize(View view){
+        Intent intent = new Intent(this, ConfirmIncidentActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -70,5 +70,6 @@
         android:layout_marginTop="141dp"
         android:text="Signaler"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner8" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner8"
+        android:onClick="onClickSignalize"/>
 </android.support.constraint.ConstraintLayout>
