@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:onClick="onClickParametersUrgentIncident"
         android:layout_marginBottom="41dp"
         android:text="Paramètres de signalement urgent" />
 

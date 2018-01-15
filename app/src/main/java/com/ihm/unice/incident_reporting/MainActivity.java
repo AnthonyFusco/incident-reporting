@@ -1,17 +1,16 @@
 package com.ihm.unice.incident_reporting;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ListView;
 
 import com.ihm.unice.incident_reporting.components.CustomAdapter;
 import com.ihm.unice.incident_reporting.components.LastReportsAdapter;
 import com.ihm.unice.incident_reporting.models.Incident;
-import com.ihm.unice.incident_reporting.models.User;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import com.ihm.unice.incident_reporting.models.MenuBaseActivity;
 import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
 
 public class MainActivity extends MenuBaseActivity {
@@ -31,4 +30,8 @@ public class MainActivity extends MenuBaseActivity {
         listView.setAdapter(adapter);
     }
 
+    public void onClickParametersUrgentIncident(View view){
+        Intent intent = new Intent(this, ParametersActivity.class);
+        startActivity(intent);
+    }
 }
