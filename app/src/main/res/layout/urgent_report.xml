@@ -17,12 +17,11 @@
 
     <Spinner
         android:id="@+id/urgentSpinner"
-        android:layout_width="wrap_content"
+        android:layout_width="@android:dimen/notification_large_icon_width"
         android:layout_height="wrap_content"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginStart="160dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <Spinner
         android:id="@+id/spinner8"
