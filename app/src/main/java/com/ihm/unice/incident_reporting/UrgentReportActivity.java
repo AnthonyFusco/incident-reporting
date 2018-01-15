@@ -16,5 +16,17 @@ public class UrgentReportActivity extends MenuBaseActivity {
                 R.array.urgent_event, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+
+        Spinner whoCall = findViewById(R.id.who_call);
+        ArrayAdapter<CharSequence> whoCallAdapter = ArrayAdapter.createFromResource(this,
+                R.array.who_call, android.R.layout.simple_spinner_item);
+        whoCallAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        whoCall.setAdapter(whoCallAdapter);
+
+        Spinner whoSignal = findViewById(R.id.who);
+        ArrayAdapter<CharSequence> whoSignalAdapter = ArrayAdapter.createFromResource(this,
+                R.array.who, android.R.layout.simple_spinner_item);
+        whoSignalAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        whoSignal.setAdapter(whoSignalAdapter);
     }
 }
