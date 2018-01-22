@@ -22,7 +22,7 @@ public class ParametersListUsersAdapter extends CustomAdapter<ParametersUser> {
 
     @Override
     public void populateViewHolder(Map<String, View> viewHolder, ParametersUser dataModel) {
-        ((TextView)viewHolder.get(NAME)).setText(dataModel.getName());
+        ((TextView)viewHolder.get(NAME)).setText(dataModel.getUser().getName());
         ((CheckBox)viewHolder.get(CHECKBOX)).setChecked(dataModel.isSelected());
     }
 

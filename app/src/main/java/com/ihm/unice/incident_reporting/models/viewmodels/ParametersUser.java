@@ -1,11 +1,13 @@
 package com.ihm.unice.incident_reporting.models.viewmodels;
 
+import com.ihm.unice.incident_reporting.models.User;
+
 public class ParametersUser {
-    private String name;
+    private User user;
     private boolean isSelected;
 
-    public ParametersUser(String name, boolean isSelected) {
-        this.name = name;
+    public ParametersUser(User user, boolean isSelected) {
+        this.user = user;
         this.isSelected = isSelected;
     }
 
@@ -13,7 +15,7 @@ public class ParametersUser {
         return isSelected;
     }
 
-    public String getName() {
-        return name;
+    public User getUser() {
+        return user;
     }
 }
