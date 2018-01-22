@@ -1,5 +1,6 @@
 package com.ihm.unice.incident_reporting;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -33,9 +34,17 @@ public abstract class MenuBaseActivity extends AppCompatActivity {
                 item.setChecked(!item.isChecked());
                 doNotCloseMenu(item);
                 return false;
+            case R.id.parameter_menu_item:
+
+                return false;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void onClickParametersUrgentIncident(MenuItem item) {
+        Intent intent = new Intent(this, ParametersActivity.class);
+        startActivity(intent);
     }
 
     private void doNotCloseMenu(MenuItem item) {
@@ -54,10 +63,11 @@ public abstract class MenuBaseActivity extends AppCompatActivity {
         });
     }
 
-    public void showBackButton(boolean show){
-        if (getSupportActionBar() != null){
+    public void showBackButton(boolean show) {
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(show);
             getSupportActionBar().setDisplayShowHomeEnabled(show);
         }
     }
+
 }
