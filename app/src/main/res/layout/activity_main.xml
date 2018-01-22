@@ -7,42 +7,13 @@
     tools:context="com.ihm.unice.incident_reporting.MainActivity">
 
     <Button
-        android:id="@+id/buttonReportUrgentParameters"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:onClick="onClickParametersUrgentIncident"
-        android:layout_marginBottom="41dp"
-        android:text="Paramètres de signalement urgent" />
-
-    <ListView
-        android:layout_width="225dp"
-        android:layout_height="188dp"
-
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="120dp"
-        android:background="@drawable/rectangle"
-        android:id="@+id/listView" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/listView"
-        android:layout_alignStart="@+id/listView"
-        android:text="Derniers incidents signalés" />
-
-    <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
-        android:text="Urgent"
-        android:onClick="onClickReportUrgentIncident"/>
+        android:onClick="onClickReportUrgentIncident"
+        android:text="Urgent" />
 
     <Button
         android:id="@+id/button2"
@@ -52,4 +23,30 @@
         android:layout_below="@+id/button"
         android:text="Signaler"
         android:onClick="onClickReportNormalIncident"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:text="Derniers incidents signalés" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_above="@+id/buttonReportUrgentParameters"
+        android:background="@drawable/rectangle" />
+
+    <Button
+        android:id="@+id/buttonReportUrgentParameters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickParametersUrgentIncident"
+        android:text="Paramètres de signalement urgent" />
+
 </RelativeLayout>
