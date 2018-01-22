@@ -39,7 +39,7 @@
             android:shape="oval"
             android:text="Normal"
             android:textColor="@android:color/background_light"
-            android:textSize="18sp" />
+            android:textSize="22sp" />
 
         <Button
             android:id="@+id/button"
@@ -55,7 +55,7 @@
             android:shape="oval"
             android:text="Urgent"
             android:textColor="@android:color/background_light"
-            android:textSize="18sp" />
+            android:textSize="22sp" />
     </LinearLayout>
 
     <TextView
