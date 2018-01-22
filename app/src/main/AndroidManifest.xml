@@ -24,6 +24,7 @@
 
         <activity android:name=".NormalReportActivity"
             android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
             android:parentActivityName=".MainActivity">
         </activity>
 

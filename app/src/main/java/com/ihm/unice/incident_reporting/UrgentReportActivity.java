@@ -6,6 +6,9 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.ihm.unice.incident_reporting.models.UrgentType;
+import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
+
 public class UrgentReportActivity extends MenuBaseActivity {
 
     @Override
@@ -14,8 +17,11 @@ public class UrgentReportActivity extends MenuBaseActivity {
         setContentView(R.layout.urgent_report);
 
         Spinner spinner = findViewById(R.id.urgentSpinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                R.array.urgent_event, android.R.layout.simple_spinner_item);
+
+        ArrayAdapter<UrgentType> adapter =
+                new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,
+                        IncidentsRepository.getUrgentTypes());
+
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
