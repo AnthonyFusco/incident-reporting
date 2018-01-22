@@ -23,7 +23,6 @@ public class MainActivity extends MenuBaseActivity {
         showBackButton(false);
 
         ListView listView = findViewById(R.id.listView);
-
         List<Incident> dataModels = IncidentsRepository.getAllIncidents();
 
         CustomAdapter<Incident> adapter = new LastReportsAdapter(dataModels, getApplicationContext());

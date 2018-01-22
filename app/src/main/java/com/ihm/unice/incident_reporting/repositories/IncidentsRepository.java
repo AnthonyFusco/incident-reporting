@@ -1,6 +1,7 @@
 package com.ihm.unice.incident_reporting.repositories;
 
 import com.ihm.unice.incident_reporting.models.Incident;
+import com.ihm.unice.incident_reporting.models.UrgentType;
 import com.ihm.unice.incident_reporting.models.User;
 import com.ihm.unice.incident_reporting.models.viewmodels.ParametersUser;
 
@@ -32,6 +33,12 @@ public class IncidentsRepository {
             new Incident(users.get(0), "20/01/2018 - 12:56")
     );
 
+    private static List<UrgentType> urgentTypes = Arrays.asList(
+            new UrgentType("Fuite de gaz"),
+            new UrgentType("Innondation"),
+            new UrgentType("Vol")
+    );
+
     private IncidentsRepository(){}
 
     public static List<Incident> getAllIncidents(){
@@ -45,6 +52,16 @@ public class IncidentsRepository {
     }
 
     public static List<User> getUsers() {
+        return users;
+    }
+
+    public static List<UrgentType> getUrgentTypes() {
+        return urgentTypes;
+    }
+
+    public static List<ParametersUser> getAllUsersSelectNormal() {
+        List<ParametersUser> users = new ArrayList<>();
+        getUsers().forEach(user -> users.add(new ParametersUser(user, false)));
         return users;
     }
 }
