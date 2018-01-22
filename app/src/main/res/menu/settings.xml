@@ -10,6 +10,14 @@
         android:enabled="true"
         android:title="Se déconnecter"
         android:visible="true" />
+
+    <item
+        android:id="@+id/parameter_menu_item"
+        android:enabled="true"
+        android:title="Paramètre"
+        android:onClick="onClickParametersUrgentIncident"
+        android:visible="true" />
+
     <item
         android:id="@+id/notification_menu_item"
         android:checkable="true"

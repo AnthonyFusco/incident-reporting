@@ -30,10 +30,7 @@ public class MainActivity extends MenuBaseActivity {
         listView.setAdapter(adapter);
     }
 
-    public void onClickParametersUrgentIncident(View view){
-        Intent intent = new Intent(this, ParametersActivity.class);
-        startActivity(intent);
-    }
+
 
     public void onClickReportUrgentIncident(View view){
         Intent intent = new Intent(this, UrgentReportActivity.class);
