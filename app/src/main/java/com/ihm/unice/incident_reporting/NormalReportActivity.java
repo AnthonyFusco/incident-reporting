@@ -11,10 +11,14 @@ import com.ihm.unice.incident_reporting.components.CustomAdapter;
 import com.ihm.unice.incident_reporting.components.ParametersListUsersAdapter;
 import com.ihm.unice.incident_reporting.models.viewmodels.ParametersUser;
 import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
+import com.ihm.unice.incident_reporting.repositories.RepositoryFactory;
+import com.ihm.unice.incident_reporting.repositories.RepositoryIncidentsBase;
 
 import java.util.List;
 
 public class NormalReportActivity extends MenuBaseActivity {
+
+    private IncidentsRepository repository = RepositoryFactory.createRepository();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +32,7 @@ public class NormalReportActivity extends MenuBaseActivity {
         spinner.setAdapter(adapter);
 
         ListView listView = findViewById(R.id.litViewNormalListUsers);
-        List<ParametersUser> dataModels = IncidentsRepository.getAllUsersSelectNormal();
+        List<ParametersUser> dataModels = repository.getAllUsersSelectNormal();
         CustomAdapter<ParametersUser> adapterListUsers = new ParametersListUsersAdapter(dataModels, getApplicationContext());
         listView.setAdapter(adapterListUsers);
     }
