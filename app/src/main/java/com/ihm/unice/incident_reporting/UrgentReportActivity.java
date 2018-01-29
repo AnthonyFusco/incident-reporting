@@ -64,7 +64,7 @@ public class UrgentReportActivity extends MenuBaseActivity {
 
             return;
         }
-        getApplicationContext().startActivity(call);
+        startActivity(call);
 
         startActivity(intent);
         finish();
