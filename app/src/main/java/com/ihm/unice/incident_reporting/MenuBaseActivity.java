@@ -8,8 +8,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.ihm.unice.incident_reporting.R;
-
 /**
  * Created by afusco on 08/01/18!
  */
@@ -43,7 +41,7 @@ public abstract class MenuBaseActivity extends AppCompatActivity {
     }
 
     public void onClickParametersUrgentIncident(MenuItem item) {
-        Intent intent = new Intent(this, ParametersActivity.class);
+        Intent intent = new Intent(this, MyParametersActivity.class);
         startActivity(intent);
     }
 

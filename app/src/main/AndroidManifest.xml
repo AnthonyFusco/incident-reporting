@@ -28,7 +28,7 @@
             android:parentActivityName=".MainActivity">
         </activity>
 
-        <activity android:name=".ParametersActivity"
+        <activity android:name=".MyParametersActivity"
             android:screenOrientation="portrait"
             android:parentActivityName=".MainActivity">
         </activity>
