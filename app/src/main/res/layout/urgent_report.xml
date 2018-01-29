@@ -6,83 +6,73 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Spinner
-        android:id="@+id/who"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="2dp"
-        android:spinnerMode="dialog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <Spinner
-        android:id="@+id/urgentSpinner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:spinnerMode="dialog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10" />
-
-    <Spinner
-        android:id="@+id/who_call"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="100dp"
-        android:spinnerMode="dialog"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/who" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
+    <Button
+        android:id="@+id/inondation"
+        style="@android:style/Widget.Material.Button"
+        android:layout_width="127dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="53dp"
         android:layout_marginTop="16dp"
-        android:text="Choisir catégorie :"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClickInondation"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/fire"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/fire"
+        style="@android:style/Widget.Material.Button"
+        android:layout_width="127dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClickFire"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="72dp"
-        android:text="Qui Signaler"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/urgentSpinner" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="72dp"
-        android:text="Qui appeller"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/who" />
-
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/gaz"
         style="@android:style/Widget.Material.Button"
+        android:layout_width="127dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="160dp"
         android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClickGaz"
         android:textColor="@android:color/background_light"
         android:textSize="22sp"
-        android:layout_width="wrap_content"
-        android:layout_height="125dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="52dp"
-        android:onClick="onClickSignalize"
-        android:text="Signaler"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/who_call" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/malaise"
+        style="@android:style/Widget.Material.Button"
+        android:layout_width="127dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="160dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClickMalaise"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/vol"
+        style="@android:style/Widget.Material.Button"
+        android:layout_width="127dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="308dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClickVol"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
