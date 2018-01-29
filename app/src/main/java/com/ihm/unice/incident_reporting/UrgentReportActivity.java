@@ -6,10 +6,14 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.ihm.unice.incident_reporting.models.Incident;
 import com.ihm.unice.incident_reporting.models.UrgentType;
+import com.ihm.unice.incident_reporting.models.User;
 import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
 import com.ihm.unice.incident_reporting.repositories.RepositoryFactory;
 import com.ihm.unice.incident_reporting.repositories.RepositoryIncidentsBase;
+
+import java.util.Date;
 
 public class UrgentReportActivity extends MenuBaseActivity {
     private IncidentsRepository repository = RepositoryFactory.createRepository();
@@ -43,6 +47,7 @@ public class UrgentReportActivity extends MenuBaseActivity {
 
     public void onClickSignalize(View view){
         Intent intent = new Intent(this, ConfirmIncidentActivity.class);
+        MainActivity.addIncident(new Incident(new User("Danièle"), new Date(), "temp"));
         startActivity(intent);
         finish();
     }

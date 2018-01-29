@@ -7,11 +7,12 @@ import java.util.Date;
 import java.util.Locale;
 
 public class Incident {
-    private static final String DATE_PATTERN = "dd/MM/yyyy - hh:mm";
+    private static final String DATE_PATTERN = "dd/MM - hh:mm";
     private static DateFormat format = new SimpleDateFormat(DATE_PATTERN, Locale.FRENCH);
 
     private User user;
     private Date date;
+    private String type;
 
     public Incident(User user, String date) {
         try {
@@ -21,11 +22,21 @@ public class Incident {
         this.user = user;
     }
 
+    public Incident(User user, Date date, String type) {
+        this.date = date;
+        this.user = user;
+        this.type = type;
+    }
+
     public User getUser() {
         return user;
     }
 
     public String getDateAsString() {
         return format.format(date);
+    }
+
+    public String getType() {
+        return type;
     }
 }

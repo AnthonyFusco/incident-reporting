@@ -9,11 +9,14 @@ import android.widget.Spinner;
 
 import com.ihm.unice.incident_reporting.components.CustomAdapter;
 import com.ihm.unice.incident_reporting.components.ParametersListUsersAdapter;
+import com.ihm.unice.incident_reporting.models.Incident;
+import com.ihm.unice.incident_reporting.models.User;
 import com.ihm.unice.incident_reporting.models.viewmodels.ParametersUser;
 import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
 import com.ihm.unice.incident_reporting.repositories.RepositoryFactory;
 import com.ihm.unice.incident_reporting.repositories.RepositoryIncidentsBase;
 
+import java.util.Date;
 import java.util.List;
 
 public class NormalReportActivity extends MenuBaseActivity {
@@ -39,6 +42,7 @@ public class NormalReportActivity extends MenuBaseActivity {
 
     public void onClickSignalize(View view){
         Intent intent = new Intent(this, ConfirmIncidentActivity.class);
+        MainActivity.addIncident(new Incident(new User("Danièle"), new Date(), "temp"));
         startActivity(intent);
         finish();
     }

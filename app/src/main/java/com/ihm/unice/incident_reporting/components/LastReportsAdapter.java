@@ -14,6 +14,7 @@ public class LastReportsAdapter extends CustomAdapter<Incident> {
 
     private static final String NAME = "name";
     private static final String DATE = "date";
+    private static final String TYPE = "type";
 
 
     public LastReportsAdapter(List<Incident> dataList, Context context) {
@@ -24,6 +25,7 @@ public class LastReportsAdapter extends CustomAdapter<Incident> {
     public void populateViewHolder(Map<String, View> viewHolder, Incident dataModel) {
         ((TextView)viewHolder.get(NAME)).setText(dataModel.getUser().getName());
         ((TextView)viewHolder.get(DATE)).setText(dataModel.getDateAsString());
+        ((TextView)viewHolder.get(TYPE)).setText(dataModel.getType());
 
     }
 
@@ -31,6 +33,6 @@ public class LastReportsAdapter extends CustomAdapter<Incident> {
     public void configureViewHolder(Map<String, View> viewHolder, View convertView) {
         viewHolder.put(NAME, convertView.findViewById(R.id.textViewLastReportsRowName));
         viewHolder.put(DATE, convertView.findViewById(R.id.textViewLastReportsRowDate));
-
+        viewHolder.put(TYPE, convertView.findViewById(R.id.type));
     }
 }

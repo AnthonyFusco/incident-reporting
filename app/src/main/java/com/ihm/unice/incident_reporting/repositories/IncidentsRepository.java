@@ -13,4 +13,6 @@ public interface IncidentsRepository {
     List<User> getUsers();
     List<UrgentType> getUrgentTypes();
     List<ParametersUser> getAllUsersSelectNormal();
+
+    void addIncident(Incident incident);
 }

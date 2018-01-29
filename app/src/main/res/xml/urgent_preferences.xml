@@ -1,14 +1,90 @@
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory
-        android:title="title">
+    <PreferenceCategory android:title="title">
 
         <CheckBoxPreference
             android:key="checkbox_preference"
-            android:title="check"
-            android:summary="tata" />
+            android:summary="tata"
+            android:title="check" />
 
     </PreferenceCategory>
+    <!--<TextView-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginStart="72dp"-->
+        <!--android:layout_marginTop="56dp"-->
+        <!--android:text="Type d'événement urgent à paramétrer" />-->
+
+    <ListPreference
+        android:id="@+id/urgentSpinner"
+        android:summary="Type d'événement urgent à paramétrer"
+        android:title="Type d'événement urgent à paramétrer"
+        android:entries="@array/urgent_event"
+        android:entryValues="@array/urgent_event"/>
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="80dp"-->
+        <!--android:layout_marginTop="92dp"-->
+        <!--android:text="Personnes signalé par cette urgence:" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/addUrgency"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="27dp"-->
+        <!--android:layout_marginEnd="148dp"-->
+        <!--android:layout_marginStart="148dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text="Ajouter une urgence" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView3"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="80dp"-->
+        <!--android:layout_marginTop="9dp"-->
+        <!--android:text="Numéro appelé pour cette urgence :" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/spinner"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:text="Numéro enregistré :" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/textViewSavedNumber"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginTop="12dp"-->
+        <!--android:text="00 00 00 00 00" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/button2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="107dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:text="Modifier le numéro" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/button3"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="148dp"-->
+        <!--android:layout_marginTop="7dp"-->
+        <!--android:text="Valider" />-->
+
+    <ListPreference
+        android:id="@+id/listView3"
+        android:summary="toto"
+        android:title="list"
+        android:entries="@array/who"
+        android:entryValues="@array/who"/>
 
 </PreferenceScreen>

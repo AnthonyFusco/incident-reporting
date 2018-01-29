@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.preference.PreferenceManager;
-import android.util.Log;
 
 import java.util.List;
 
@@ -14,12 +13,17 @@ public class MyParametersActivity extends PreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public void onBuildHeaders(List<Header> target) {
         loadHeadersFromResource(R.xml.preferences_header, target);
+    }
+
+    @Override
+    protected boolean isValidFragment(String fragmentName) {
+        return Prefs1Fragment.class.getName().equals(fragmentName) ||
+                Prefs2Fragment.class.getName().equals(fragmentName);
     }
 
     /**
@@ -30,8 +34,11 @@ public class MyParametersActivity extends PreferenceActivity {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
+            PreferenceManager.setDefaultValues(getActivity(),
+                    R.xml.normal_preferences, false);
+
             // Load the preferences from an XML resource
-            addPreferencesFromResource(R.xml.normal_preferences);
+//            addPreferencesFromResource(R.xml.normal_preferences);
         }
 
 
@@ -45,16 +52,8 @@ public class MyParametersActivity extends PreferenceActivity {
         public void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
 
-            // Can retrieve arguments from headers XML.
-            Log.i("args", "Arguments: " + getArguments());
-
             // Load the preferences from an XML resource
             addPreferencesFromResource(R.xml.urgent_preferences);
         }
-    }
-
-    @Override
-    protected boolean isValidFragment(String fragmentName) {
-        return Prefs1Fragment.class.getName().equals(fragmentName) || Prefs2Fragment.class.getName().equals(fragmentName);
     }
 }

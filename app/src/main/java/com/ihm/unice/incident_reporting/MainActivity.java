@@ -11,12 +11,14 @@ import com.ihm.unice.incident_reporting.models.Incident;
 
 import java.util.List;
 
+import com.ihm.unice.incident_reporting.models.User;
 import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
 import com.ihm.unice.incident_reporting.repositories.RepositoryFactory;
 import com.ihm.unice.incident_reporting.repositories.RepositoryIncidentsBase;
 
 public class MainActivity extends MenuBaseActivity {
-    private IncidentsRepository repository = RepositoryFactory.createRepository();
+    private static IncidentsRepository repository = RepositoryFactory.createRepository();
+    private static CustomAdapter<Incident> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +30,15 @@ public class MainActivity extends MenuBaseActivity {
         ListView listView = findViewById(R.id.listView);
         List<Incident> dataModels = repository.getAllIncidents();
 
-        CustomAdapter<Incident> adapter = new LastReportsAdapter(dataModels, getApplicationContext());
+        adapter = new LastReportsAdapter(dataModels, getApplicationContext());
 
         listView.setAdapter(adapter);
     }
 
-
+    public static void addIncident(Incident incident) {
+        repository.addIncident(incident);
+        adapter.notifyDataSetChanged();
+    }
 
     public void onClickReportUrgentIncident(View view){
         Intent intent = new Intent(this, UrgentReportActivity.class);

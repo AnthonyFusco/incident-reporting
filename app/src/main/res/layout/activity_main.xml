@@ -36,7 +36,6 @@
             android:backgroundTint="@color/colorPrimary"
             android:drawableLeft="@drawable/ic_action_name"
             android:onClick="onClickReportNormalIncident"
-            android:shape="oval"
             android:text="Normal"
             android:textColor="@android:color/background_light"
             android:textSize="22sp" />
@@ -52,7 +51,6 @@
             android:backgroundTint="@color/colorPrimary"
             android:drawableLeft="@drawable/urgent"
             android:onClick="onClickReportUrgentIncident"
-            android:shape="oval"
             android:text="Urgent"
             android:textColor="@android:color/background_light"
             android:textSize="22sp" />

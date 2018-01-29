@@ -7,35 +7,42 @@ import com.ihm.unice.incident_reporting.models.viewmodels.ParametersUser;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
+import java.util.Stack;
 
 public class RepositoryIncidentsBase implements IncidentsRepository{
     private static List<User> users = Arrays.asList(
-            new User("Fernande"),
-            new User("Roberto"),
-            new User("Felicie"),
-            new User("Lulu"),
-            new User("Georges"),
-            new User("Carole")
-    ); // #5
-
-    private static List<Incident> incidents = Arrays.asList(
-            new Incident(users.get(0), "11/01/2018 - 12:56"),
-            new Incident(users.get(3), "15/01/2018 - 12:56"),
-            new Incident(users.get(1), "18/01/2018 - 12:56"),
-            new Incident(users.get(2), "19/01/2018 - 12:56"),
-            new Incident(users.get(4), "19/01/2018 - 12:56"),
-            new Incident(users.get(0), "20/01/2018 - 12:56")
+            new User("Matthieu"),
+            new User("François "),
+            new User("Lydie     ")
     );
+
+    private static List<Incident> incidents = new ArrayList<>();
+
+    public void addIncident(Incident incident) {
+        incidents.add(0, incident);
+    }
 
     private static List<UrgentType> urgentTypes = Arrays.asList(
             new UrgentType("Fuite de gaz"),
             new UrgentType("Innondation"),
+            new UrgentType("Malaise"),
+            new UrgentType("Incendie"),
             new UrgentType("Vol")
     );
 
-    public RepositoryIncidentsBase(){}
+    RepositoryIncidentsBase(){
+//       incidents.addAll(Arrays.asList(
+//                new Incident(users.get(0), "11/01/2018 - 12:56"),
+//                new Incident(users.get(3), "15/01/2018 - 12:56"),
+//                new Incident(users.get(1), "18/01/2018 - 12:56"),
+//                new Incident(users.get(2), "19/01/2018 - 12:56"),
+//                new Incident(users.get(4), "19/01/2018 - 12:56"),
+//                new Incident(users.get(0), "20/01/2018 - 12:56")
+//        ));
+    }
 
     @Override
     public List<Incident> getAllIncidents(){
