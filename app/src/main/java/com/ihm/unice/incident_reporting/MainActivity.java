@@ -12,8 +12,11 @@ import com.ihm.unice.incident_reporting.models.Incident;
 import java.util.List;
 
 import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
+import com.ihm.unice.incident_reporting.repositories.RepositoryFactory;
+import com.ihm.unice.incident_reporting.repositories.RepositoryIncidentsBase;
 
 public class MainActivity extends MenuBaseActivity {
+    private IncidentsRepository repository = RepositoryFactory.createRepository();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +26,7 @@ public class MainActivity extends MenuBaseActivity {
         showBackButton(false);
 
         ListView listView = findViewById(R.id.listView);
-        List<Incident> dataModels = IncidentsRepository.getAllIncidents();
+        List<Incident> dataModels = repository.getAllIncidents();
 
         CustomAdapter<Incident> adapter = new LastReportsAdapter(dataModels, getApplicationContext());
 

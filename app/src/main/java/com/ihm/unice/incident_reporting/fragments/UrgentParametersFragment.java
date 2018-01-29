@@ -22,10 +22,13 @@ import com.ihm.unice.incident_reporting.components.CustomAdapter;
 import com.ihm.unice.incident_reporting.components.ParametersListUsersAdapter;
 import com.ihm.unice.incident_reporting.models.viewmodels.ParametersUser;
 import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
+import com.ihm.unice.incident_reporting.repositories.RepositoryFactory;
+import com.ihm.unice.incident_reporting.repositories.RepositoryIncidentsBase;
 
 import java.util.List;
 
 public class UrgentParametersFragment extends AbstractFragment {
+    private IncidentsRepository repository = RepositoryFactory.createRepository();
 
     private View rootView;
     @Nullable
@@ -40,7 +43,7 @@ public class UrgentParametersFragment extends AbstractFragment {
         spinner.setAdapter(adapter);
 
         ListView listView = rootView.findViewById(R.id.listView3);
-        List<ParametersUser> dataModels = IncidentsRepository.getAllUsersParameters();
+        List<ParametersUser> dataModels = repository.getAllUsersParameters();
         CustomAdapter<ParametersUser> adapterListUsers = new ParametersListUsersAdapter(dataModels, getActivity());
         listView.setAdapter(adapterListUsers);
 

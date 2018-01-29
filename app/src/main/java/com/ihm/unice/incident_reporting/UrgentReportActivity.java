@@ -8,8 +8,11 @@ import android.widget.Spinner;
 
 import com.ihm.unice.incident_reporting.models.UrgentType;
 import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
+import com.ihm.unice.incident_reporting.repositories.RepositoryFactory;
+import com.ihm.unice.incident_reporting.repositories.RepositoryIncidentsBase;
 
 public class UrgentReportActivity extends MenuBaseActivity {
+    private IncidentsRepository repository = RepositoryFactory.createRepository();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +23,7 @@ public class UrgentReportActivity extends MenuBaseActivity {
 
         ArrayAdapter<UrgentType> adapter =
                 new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,
-                        IncidentsRepository.getUrgentTypes());
+                        repository.getUrgentTypes());
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
