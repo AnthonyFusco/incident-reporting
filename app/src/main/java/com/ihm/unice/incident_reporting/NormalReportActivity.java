@@ -14,7 +14,6 @@ import com.ihm.unice.incident_reporting.models.User;
 import com.ihm.unice.incident_reporting.models.viewmodels.ParametersUser;
 import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
 import com.ihm.unice.incident_reporting.repositories.RepositoryFactory;
-import com.ihm.unice.incident_reporting.repositories.RepositoryIncidentsBase;
 
 import java.util.Date;
 import java.util.List;
@@ -38,6 +37,7 @@ public class NormalReportActivity extends MenuBaseActivity {
         List<ParametersUser> dataModels = repository.getAllUsersSelectNormal();
         CustomAdapter<ParametersUser> adapterListUsers = new ParametersListUsersAdapter(dataModels, getApplicationContext());
         listView.setAdapter(adapterListUsers);
+
     }
 
     public void onClickSignalize(View view){

@@ -1,6 +1,7 @@
 package com.ihm.unice.incident_reporting;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -49,6 +50,12 @@ public class UrgentReportActivity extends MenuBaseActivity {
         Intent intent = new Intent(this, ConfirmIncidentActivity.class);
         MainActivity.addIncident(new Incident(new User("Danièle"), new Date(),
                 ((Spinner) findViewById(R.id.urgentSpinner)).getSelectedItem().toString()));
+
+        Intent call = new Intent(Intent.ACTION_CALL);
+
+        call.setData(Uri.parse("tel:" + "0613548760"));
+        getApplicationContext().startActivity(intent);
+
         startActivity(intent);
         finish();
     }
