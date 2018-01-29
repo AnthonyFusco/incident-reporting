@@ -47,7 +47,9 @@ public class IncidentsRepository {
 
     public static List<ParametersUser> getAllUsersParameters(){
         List<ParametersUser> users = new ArrayList<>();
-        getUsers().forEach(user -> users.add(new ParametersUser(user, new Random().nextBoolean())));
+        for (User user : getUsers()) {
+            users.add(new ParametersUser(user, new Random().nextBoolean()));
+        }
         return users;
     }
 
@@ -61,7 +63,9 @@ public class IncidentsRepository {
 
     public static List<ParametersUser> getAllUsersSelectNormal() {
         List<ParametersUser> users = new ArrayList<>();
-        getUsers().forEach(user -> users.add(new ParametersUser(user, false)));
+        for (User user : getUsers()) {
+            users.add(new ParametersUser(user, false));
+        }
         return users;
     }
 }

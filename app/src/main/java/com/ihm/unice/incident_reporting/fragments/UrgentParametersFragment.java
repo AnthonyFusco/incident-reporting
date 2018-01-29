@@ -1,6 +1,7 @@
 package com.ihm.unice.incident_reporting.fragments;
 
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -44,19 +44,35 @@ public class UrgentParametersFragment extends AbstractFragment {
         CustomAdapter<ParametersUser> adapterListUsers = new ParametersListUsersAdapter(dataModels, getActivity());
         listView.setAdapter(adapterListUsers);
 
-        rootView.findViewById(R.id.button2).setOnClickListener(this::onClickEditWhoCall);
-        rootView.findViewById(R.id.button3).setOnClickListener(this::onClickConfirm);
-        rootView.findViewById(R.id.addUrgency).setOnClickListener(this::onClickAddEmergency);
+        rootView.findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickEditWhoCall();
+            }
+        });
+
+        rootView.findViewById(R.id.button3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickConfirm();
+            }
+        });
+        rootView.findViewById(R.id.addUrgency).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onClickAddEmergency();
+            }
+        });
         return rootView;
     }
 
-    public void onClickConfirm(View view){
+    public void onClickConfirm(){
         Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
         getActivity().finish();
     }
 
-    public void onClickAddEmergency(View view){
+    public void onClickAddEmergency(){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Ajouter une urgence");
 
@@ -65,15 +81,22 @@ public class UrgentParametersFragment extends AbstractFragment {
 
         input.setInputType(InputType.TYPE_CLASS_TEXT);
         builder.setView(input);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
 
-        builder.setPositiveButton("OK", (dialog, which) -> {
-            //save the new urgent type
+            }
         });
-        builder.setNegativeButton("Annuler", (dialog, which) -> dialog.cancel());
+        builder.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
         builder.show();
     }
 
-    public void onClickEditWhoCall(View view){
+    public void onClickEditWhoCall(){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setTitle("Qui appeler ?");
 
@@ -83,11 +106,19 @@ public class UrgentParametersFragment extends AbstractFragment {
         input.setInputType(InputType.TYPE_CLASS_NUMBER);
         builder.setView(input);
 
-        builder.setPositiveButton("OK", (dialog, which) -> {
-            TextView textViewSaved = rootView.findViewById(R.id.textViewSavedNumber);
-            textViewSaved.setText(input.getText());
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                TextView textViewSaved = rootView.findViewById(R.id.textViewSavedNumber);
+                textViewSaved.setText(input.getText());
+            }
         });
-        builder.setNegativeButton("Annuler", (dialog, which) -> dialog.cancel());
+        builder.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
         builder.show();
     }
 
