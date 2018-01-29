@@ -33,6 +33,8 @@ public class MyParametersActivity extends PreferenceActivity {
             // Load the preferences from an XML resource
             addPreferencesFromResource(R.xml.normal_preferences);
         }
+
+
     }
 
     /**
@@ -51,4 +53,8 @@ public class MyParametersActivity extends PreferenceActivity {
         }
     }
 
+    @Override
+    protected boolean isValidFragment(String fragmentName) {
+        return Prefs1Fragment.class.getName().equals(fragmentName) || Prefs2Fragment.class.getName().equals(fragmentName);
+    }
 }
