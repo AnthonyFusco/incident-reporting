@@ -58,15 +58,13 @@ public class UrgentReportActivity extends MenuBaseActivity {
 
         call.setData(Uri.parse("tel:" + "0613548760"));
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-            getApplicationContext().startActivity(call);
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.CALL_PHONE},
+                    1);
+
             return;
         }
+        getApplicationContext().startActivity(call);
 
         startActivity(intent);
         finish();
