@@ -42,7 +42,8 @@ public class NormalReportActivity extends MenuBaseActivity {
 
     public void onClickSignalize(View view){
         Intent intent = new Intent(this, ConfirmIncidentActivity.class);
-        MainActivity.addIncident(new Incident(new User("Danièle"), new Date(), "temp"));
+        MainActivity.addIncident(new Incident(new User("Danièle"), new Date(),
+                ((Spinner) findViewById(R.id.spinner4)).getSelectedItem().toString()));
         startActivity(intent);
         finish();
     }
