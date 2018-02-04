@@ -33,6 +33,12 @@ public class NormalReportActivity extends MenuBaseActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
 
+        Spinner spinnerPieces = findViewById(R.id.editText3);
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
+                R.array.type_pieces, android.R.layout.simple_spinner_item);
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerPieces.setAdapter(adapter2);
+
         ListView listView = findViewById(R.id.litViewNormalListUsers);
         List<ParametersUser> dataModels = repository.getAllUsersSelectNormal();
         CustomAdapter<ParametersUser> adapterListUsers = new ParametersListUsersAdapter(dataModels, getApplicationContext());
