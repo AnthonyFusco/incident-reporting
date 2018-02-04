@@ -27,7 +27,7 @@ public class UrgentReportActivity extends MenuBaseActivity {
     }
 
     public void baseOnClick() {
-        Intent intent = new Intent(this, ConfirmIncidentActivity.class);
+
         Intent call = new Intent(Intent.ACTION_CALL);
 
         call.setData(Uri.parse("tel:" + "0613548760"));
@@ -38,10 +38,18 @@ public class UrgentReportActivity extends MenuBaseActivity {
 
             return;
         }
-        startActivity(call);
+        startActivityForResult(call, 42);
 
-        startActivity(intent);
-        finish();
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 42) {
+            Intent intent = new Intent(this, ConfirmIncidentActivity.class);
+            startActivity(intent);
+            finish();
+        }
     }
 
     public void onClickFire(View view) {

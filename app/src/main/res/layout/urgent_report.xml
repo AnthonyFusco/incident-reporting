@@ -6,71 +6,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Sélectionnez le type d'incident urgent"/>
+
+    <ImageButton
         android:id="@+id/inondation"
         style="@android:style/Widget.Material.Button"
         android:layout_width="127dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:layout_height="155dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="36dp"
         android:onClick="onClickInondation"
-        android:textColor="@android:color/background_light"
+
+        android:src="@drawable/eau"
+
         android:textSize="22sp"
         app:layout_constraintStart_toEndOf="@+id/fire"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/fire"
         style="@android:style/Widget.Material.Button"
         android:layout_width="127dp"
-        android:layout_height="125dp"
+        android:layout_height="150dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="36dp"
+
         android:onClick="onClickFire"
+        android:src="@drawable/incendie"
         android:textColor="@android:color/background_light"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/gaz"
         style="@android:style/Widget.Material.Button"
         android:layout_width="127dp"
-        android:layout_height="125dp"
+        android:layout_height="150dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="160dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="196dp"
+
         android:onClick="onClickGaz"
+        android:src="@drawable/gaz"
         android:textColor="@android:color/background_light"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/malaise"
         style="@android:style/Widget.Material.Button"
         android:layout_width="127dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="216dp"
-        android:layout_marginTop="160dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:layout_height="150dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="196dp"
+
         android:onClick="onClickMalaise"
+        android:src="@drawable/malaise"
         android:textColor="@android:color/background_light"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/vol"
         style="@android:style/Widget.Material.Button"
         android:layout_width="127dp"
-        android:layout_height="125dp"
+        android:layout_height="150dp"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="308dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:layout_marginTop="356dp"
+
         android:onClick="onClickVol"
+        android:src="@drawable/vol"
         android:textColor="@android:color/background_light"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"

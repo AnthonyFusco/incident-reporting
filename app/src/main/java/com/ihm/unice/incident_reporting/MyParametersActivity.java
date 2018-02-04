@@ -98,7 +98,7 @@ public class MyParametersActivity extends PreferenceActivity {
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object o) {
                     updateUsers(getArguments().getString("type"));
-                    return mat.isChecked();
+                    return true;
                 }
             });
 
@@ -106,7 +106,7 @@ public class MyParametersActivity extends PreferenceActivity {
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object o) {
                     updateUsers(getArguments().getString("type"));
-                    return fra.isChecked();
+                    return true;
                 }
             });
 
@@ -114,7 +114,7 @@ public class MyParametersActivity extends PreferenceActivity {
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object o) {
                     updateUsers(getArguments().getString("type"));
-                    return lyd.isChecked();
+                    return true;
                 }
             });
 

@@ -6,4 +6,5 @@
     <color name="empty">#00ffffff</color>
     <color name="colorBackground">#a7b1e7</color>
     <color name="grayloght">#e0e0e0</color>
+    <color name="black">#000000</color>
 </resources>
