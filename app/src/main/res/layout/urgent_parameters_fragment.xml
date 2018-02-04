@@ -10,9 +10,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="75dp"
         android:layout_marginTop="56dp"
-        android:text="Type d'événement urgent à paramétrer"
+        android:text="Type d'événement urgent à paramétrer :"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,21 +30,26 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="75dp"
         android:layout_marginTop="92dp"
-        android:text="Personnes signalé par cette urgence:"
+        android:text="Personnes signalé par cette urgence :"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/urgentSpinner" />
 
     <Button
         android:id="@+id/addUrgency"
+        style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="27dp"
         android:layout_marginEnd="148dp"
         android:layout_marginStart="148dp"
         android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:paddingHorizontal="20px"
         android:text="Ajouter une urgence"
+        android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -54,9 +60,10 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="75dp"
         android:layout_marginTop="9dp"
         android:text="Numéro appelé pour cette urgence :"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listView3" />
 
@@ -64,8 +71,10 @@
         android:id="@+id/spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="75dp"
         android:layout_marginTop="12dp"
         android:text="Numéro enregistré :"
+        android:textStyle="italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -73,7 +82,7 @@
         android:id="@+id/textViewSavedNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:text="00 00 00 00 00"
         app:layout_constraintStart_toEndOf="@+id/spinner"
@@ -81,21 +90,29 @@
 
     <Button
         android:id="@+id/button2"
+        style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="107dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorPrimary"
+        android:paddingHorizontal="20px"
         android:text="Modifier le numéro"
+        android:textColor="@android:color/background_light"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <Button
         android:id="@+id/button3"
+        style="@style/Widget.AppCompat.Button.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="148dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginStart="154dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:paddingHorizontal="20px"
         android:text="Valider"
+        android:textColor="@android:color/background_light"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 

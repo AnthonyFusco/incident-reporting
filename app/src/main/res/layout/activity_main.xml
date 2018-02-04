@@ -10,9 +10,10 @@
         android:id="@+id/signal_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="15dp"
         android:paddingLeft="15dp"
+        android:paddingTop="15dp"
         android:text="Signaler un incident"
+        android:textAlignment="textStart"
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:textStyle="bold" />

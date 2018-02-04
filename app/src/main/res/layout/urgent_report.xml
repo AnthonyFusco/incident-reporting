@@ -9,32 +9,32 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
-        android:text="Sélectionnez le type d'incident urgent"/>
+        android:text="Sélectionnez le type d'incident urgent"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <ImageButton
         android:id="@+id/inondation"
-        style="@android:style/Widget.Material.Button"
+        style="@android:style/Widget.Holo.Light.ImageButton"
         android:layout_width="127dp"
-        android:layout_height="155dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="36dp"
+        android:layout_height="170dp"
+        android:layout_marginTop="196dp"
         android:onClick="onClickInondation"
 
         android:src="@drawable/eau"
 
         android:textSize="22sp"
-        app:layout_constraintStart_toEndOf="@+id/fire"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="208dp" />
 
     <ImageButton
         android:id="@+id/fire"
-        style="@android:style/Widget.Material.Button"
+        style="@android:style/Widget.Holo.Light.ImageButton"
         android:layout_width="127dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="36dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="36dp"
 
         android:onClick="onClickFire"
@@ -46,10 +46,10 @@
 
     <ImageButton
         android:id="@+id/gaz"
-        style="@android:style/Widget.Material.Button"
+        style="@android:style/Widget.Holo.Light.ImageButton"
         android:layout_width="127dp"
         android:layout_height="150dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="196dp"
 
         android:onClick="onClickGaz"
@@ -61,11 +61,11 @@
 
     <ImageButton
         android:id="@+id/malaise"
-        style="@android:style/Widget.Material.Button"
+        style="@android:style/Widget.Holo.Light.ImageButton"
         android:layout_width="127dp"
         android:layout_height="150dp"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="36dp"
 
         android:onClick="onClickMalaise"
         android:src="@drawable/malaise"
@@ -76,10 +76,10 @@
 
     <ImageButton
         android:id="@+id/vol"
-        style="@android:style/Widget.Material.Button"
+        style="@android:style/Widget.Holo.Light.ImageButton"
         android:layout_width="127dp"
         android:layout_height="150dp"
-        android:layout_marginStart="36dp"
+        android:layout_marginStart="52dp"
         android:layout_marginTop="356dp"
 
         android:onClick="onClickVol"

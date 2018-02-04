@@ -13,7 +13,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="Décrire l'incident :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -121,16 +123,16 @@
 
     <Button
         android:id="@+id/button5"
-        style="@android:style/Widget.Material.Button"
-        android:backgroundTint="@color/colorPrimary"
-        android:textColor="@android:color/background_light"
-        android:textSize="22sp"
+        style="@android:style/Widget.Material.Button.Small"
         android:layout_width="wrap_content"
-        android:layout_height="125dp"
+        android:layout_height="0dp"
         android:layout_marginStart="148dp"
         android:layout_marginTop="9dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="onClickSignalize"
         android:text="Signaler"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        android:onClick="onClickSignalize"/>
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 </android.support.constraint.ConstraintLayout>
