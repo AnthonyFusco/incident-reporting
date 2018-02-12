@@ -46,7 +46,8 @@ public class UrgentReportActivity extends MenuBaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 42) {
-            Intent intent = new Intent(this, ConfirmIncidentActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.putExtra("toast", true);
             startActivity(intent);
             finish();
         }
