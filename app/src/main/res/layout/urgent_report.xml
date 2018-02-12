@@ -20,14 +20,15 @@
         style="@android:style/Widget.Holo.Light.ImageButton"
         android:layout_width="127dp"
         android:layout_height="170dp"
+        android:layout_marginStart="29dp"
         android:layout_marginTop="196dp"
+
         android:onClick="onClickInondation"
 
         android:src="@drawable/eau"
-
         android:textSize="22sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="208dp" />
+        app:layout_constraintStart_toEndOf="@+id/gaz"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/fire"
@@ -48,7 +49,7 @@
         android:id="@+id/gaz"
         style="@android:style/Widget.Holo.Light.ImageButton"
         android:layout_width="127dp"
-        android:layout_height="150dp"
+        android:layout_height="170dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="196dp"
 
@@ -80,7 +81,7 @@
         android:layout_width="127dp"
         android:layout_height="150dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="356dp"
+        android:layout_marginTop="376dp"
 
         android:onClick="onClickVol"
         android:src="@drawable/vol"
