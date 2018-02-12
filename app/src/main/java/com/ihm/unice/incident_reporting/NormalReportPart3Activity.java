@@ -9,10 +9,13 @@ import android.widget.Spinner;
 
 import com.ihm.unice.incident_reporting.components.CustomAdapter;
 import com.ihm.unice.incident_reporting.components.ParametersListUsersAdapter;
+import com.ihm.unice.incident_reporting.models.Incident;
+import com.ihm.unice.incident_reporting.models.User;
 import com.ihm.unice.incident_reporting.models.viewmodels.ParametersUser;
 import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
 import com.ihm.unice.incident_reporting.repositories.RepositoryFactory;
 
+import java.util.Date;
 import java.util.List;
 
 public class NormalReportPart3Activity extends MenuBaseActivity {
@@ -28,7 +31,7 @@ public class NormalReportPart3Activity extends MenuBaseActivity {
         CustomAdapter<ParametersUser> adapterListUsers = new ParametersListUsersAdapter(dataModels, getApplicationContext());
         listView.setAdapter(adapterListUsers);
 
-        Spinner spinnerPieces = findViewById(R.id.editText3);
+        Spinner spinnerPieces = findViewById(R.id.pieces);
         ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
                 R.array.type_pieces, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -39,6 +42,8 @@ public class NormalReportPart3Activity extends MenuBaseActivity {
     public void onClickNext(View view){
         Intent intent = new Intent(this, MainActivity.class);
 
+        MainActivity.addIncident(new Incident(new User("Danièle"), new Date(),
+                ((Spinner) findViewById(R.id.pieces)).getSelectedItem().toString()));
         startActivity(intent);
         finish();
     }
