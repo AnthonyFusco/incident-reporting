@@ -23,7 +23,7 @@ public class MainActivity extends MenuBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle("App signalisation");
+        setTitle("Signaler un incident");
         setContentView(R.layout.activity_main);
         showBackButton(false);
 

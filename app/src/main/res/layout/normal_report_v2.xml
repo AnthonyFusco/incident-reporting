@@ -13,7 +13,8 @@
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="invisible" />
 
     <ImageButton
         android:id="@+id/inondation"

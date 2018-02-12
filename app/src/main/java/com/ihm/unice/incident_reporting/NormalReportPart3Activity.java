@@ -33,11 +33,11 @@ public class NormalReportPart3Activity extends MenuBaseActivity {
                 R.array.type_pieces, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerPieces.setAdapter(adapter2);
-
+        setTitle("Informations supplémentaires");
     }
 
     public void onClickNext(View view){
-        Intent intent = new Intent(this, ConfirmIncidentActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
 
         startActivity(intent);
         finish();

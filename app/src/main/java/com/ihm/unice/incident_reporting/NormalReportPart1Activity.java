@@ -10,6 +10,7 @@ public class NormalReportPart1Activity extends MenuBaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.normal_report_v2);
+        setTitle("Type d'incident");
     }
 
     public void onClickNext(View view){

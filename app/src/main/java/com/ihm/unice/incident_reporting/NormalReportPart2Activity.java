@@ -34,6 +34,7 @@ public class NormalReportPart2Activity extends MenuBaseActivity {
         List<ParametersUser> dataModels = repository.getAllUsersSelectNormal();
         CustomAdapter<ParametersUser> adapterListUsers = new ParametersListUsersAdapter(dataModels, getApplicationContext());
         listView.setAdapter(adapterListUsers);
+        setTitle("Informations supplémentaires");
 
     }
 
