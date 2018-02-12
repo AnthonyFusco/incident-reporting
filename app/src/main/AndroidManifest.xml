@@ -37,6 +37,9 @@
         <activity android:name=".ConfirmIncidentActivity"
             android:screenOrientation="portrait" >
         </activity>
+        <activity android:name=".NormalReportPart1Activity" />
+        <activity android:name=".NormalReportPart2Activity" />
+        <activity android:name=".NormalReportPart3Activity" />
     </application>
 
 </manifest>

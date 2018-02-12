@@ -46,7 +46,7 @@ public class MainActivity extends MenuBaseActivity {
     }
 
     public void onClickReportNormalIncident(View view){
-        Intent intent = new Intent(this, NormalReportActivity.class);
+        Intent intent = new Intent(this, NormalReportPart1Activity.class);
         startActivity(intent);
     }
 }
