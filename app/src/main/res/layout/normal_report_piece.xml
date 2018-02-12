@@ -9,9 +9,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="135dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="16dp"
         android:text="Personnes visées :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,8 +30,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="204dp"
-        android:text="Pièce(s) :"
+        android:layout_marginTop="207dp"
+        android:text="Pièce :"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,21 +40,25 @@
         android:id="@+id/pieces"
         android:layout_width="162dp"
         android:layout_height="38dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="204dp"
         android:ems="10"
         android:hint="Pièce concernée"
         android:inputType="textPersonName"
+        android:spinnerMode="dialog"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="308dp"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="312dp"
+        android:background="@color/colorPrimary"
         android:onClick="onClickNext"
         android:text="Signaler"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
