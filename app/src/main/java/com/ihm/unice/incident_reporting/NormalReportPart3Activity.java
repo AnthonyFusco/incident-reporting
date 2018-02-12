@@ -38,7 +38,7 @@ public class NormalReportPart3Activity extends MenuBaseActivity {
 
     public void onClickNext(View view){
         Intent intent = new Intent(this, MainActivity.class);
-
+        intent.putExtra("toast", true);
         startActivity(intent);
         finish();
     }

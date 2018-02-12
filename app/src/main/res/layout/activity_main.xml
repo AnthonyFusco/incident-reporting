@@ -1,84 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/activitymainlayout"
+
     android:layout_height="match_parent"
-    tools:context="com.ihm.unice.incident_reporting.MainActivity">
-
-    <TextView
-        android:id="@+id/signal_description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="15dp"
-        android:paddingTop="15dp"
-        android:text="Signaler un incident"
-        android:textAlignment="textStart"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:visibility="invisible" />
-
-    <LinearLayout
-        android:id="@+id/button_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="20dp"
-        android:layout_below="@+id/signal_description"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button2"
-            style="@android:style/Widget.Material.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="125dp"
-            android:layout_alignEnd="@+id/button"
-            android:layout_below="@+id/button"
-            android:layout_weight="1"
-            android:backgroundTint="@color/colorPrimary"
-            android:drawableLeft="@drawable/ic_action_name"
-            android:onClick="onClickReportNormalIncident"
-            android:text="Normal"
-            android:textColor="@android:color/background_light"
-            android:textSize="22sp" />
-
-        <Button
-            android:id="@+id/button"
-            style="@android:style/Widget.Material.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="125dp"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_weight="1"
-            android:backgroundTint="@color/colorPrimary"
-            android:drawableLeft="@drawable/urgent"
-            android:onClick="onClickReportUrgentIncident"
-            android:text="Urgent"
-            android:textColor="@android:color/background_light"
-            android:textSize="22sp" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_layout"
-        android:text="Derniers incidents signalés"
-        android:textColor="@android:color/black"
-        android:paddingTop="30dp"
-        android:paddingLeft="15dp"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <ListView
-        android:id="@+id/listView"
+    tools:context=".MainActivity">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView"
-        android:footerDividersEnabled="true"
-        android:headerDividersEnabled="true"
-        android:listSelector="@android:color/transparent"
-        android:paddingTop="20dp" />
+        tools:context="com.ihm.unice.incident_reporting.MainActivity">
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/signal_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="Signaler un incident"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:layout_below="@+id/signal_description"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button2"
+                style="@android:style/Widget.Material.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="125dp"
+                android:layout_alignEnd="@+id/button"
+                android:layout_below="@+id/button"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:drawableLeft="@drawable/ic_action_name"
+                android:onClick="onClickReportNormalIncident"
+                android:text="Normal"
+                android:textColor="@android:color/background_light"
+                android:textSize="22sp" />
+
+            <Button
+                android:id="@+id/button"
+                style="@android:style/Widget.Material.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="125dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorPrimary"
+                android:drawableLeft="@drawable/urgent"
+                android:onClick="onClickReportUrgentIncident"
+                android:text="Urgent"
+                android:textColor="@android:color/background_light"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_layout"
+            android:text="Derniers incidents signalés"
+            android:textColor="@android:color/black"
+            android:paddingTop="30dp"
+            android:paddingLeft="15dp"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:listSelector="@android:color/transparent"
+            android:paddingTop="20dp" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+

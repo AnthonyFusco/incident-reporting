@@ -2,8 +2,11 @@ package com.ihm.unice.incident_reporting;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
+import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 
 import com.ihm.unice.incident_reporting.components.CustomAdapter;
 import com.ihm.unice.incident_reporting.components.LastReportsAdapter;
@@ -33,11 +36,26 @@ public class MainActivity extends MenuBaseActivity {
         adapter = new LastReportsAdapter(dataModels, getApplicationContext());
 
         listView.setAdapter(adapter);
+
+
     }
 
     public static void addIncident(Incident incident) {
         repository.addIncident(incident);
         adapter.notifyDataSetChanged();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        setIntent(intent);
+        if (getIntent().getBooleanExtra("toast", false)) {
+            CoordinatorLayout layout = findViewById(R.id.activitymainlayout);
+            Snackbar snackbar = Snackbar
+                    .make(layout, "Incident signalé !", Snackbar.LENGTH_LONG);
+
+            snackbar.show();
+        }
     }
 
     public void onClickReportUrgentIncident(View view){
