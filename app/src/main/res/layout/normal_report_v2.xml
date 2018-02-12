@@ -23,7 +23,7 @@
         android:layout_height="170dp"
         android:layout_marginStart="29dp"
         android:layout_marginTop="196dp"
-
+        android:background="@null"
         android:onClick="onClickNext"
 
         android:src="@drawable/eau"
@@ -38,7 +38,7 @@
         android:layout_height="151dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="36dp"
-
+        android:background="@null"
         android:onClick="onClickNext"
         android:src="@drawable/incendie"
         android:textColor="@android:color/background_light"
@@ -52,8 +52,8 @@
         android:layout_width="127dp"
         android:layout_height="170dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="196dp"
-
+        android:layout_marginTop="208dp"
+        android:background="@null"
         android:onClick="onClickNext"
         android:src="@drawable/gaz"
         android:textColor="@android:color/background_light"
@@ -67,8 +67,8 @@
         android:layout_width="127dp"
         android:layout_height="150dp"
         android:layout_marginStart="208dp"
-        android:layout_marginTop="36dp"
-
+        android:layout_marginTop="44dp"
+        android:background="@null"
         android:onClick="onClickNext"
         android:src="@drawable/malaise"
         android:textColor="@android:color/background_light"
