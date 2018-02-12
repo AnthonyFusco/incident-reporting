@@ -17,12 +17,12 @@
 
     <ImageButton
         android:id="@+id/inondation"
-        style="@android:style/Widget.Holo.Light.ImageButton"
-        android:layout_width="127dp"
-        android:layout_height="170dp"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="136dp"
+        android:layout_height="158dp"
         android:layout_marginStart="29dp"
         android:layout_marginTop="196dp"
-
+        android:background="@null"
         android:onClick="onClickInondation"
 
         android:src="@drawable/eau"
@@ -32,60 +32,52 @@
 
     <ImageButton
         android:id="@+id/fire"
-        style="@android:style/Widget.Holo.Light.ImageButton"
         android:layout_width="127dp"
         android:layout_height="151dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="36dp"
-
+        android:background="@null"
         android:onClick="onClickFire"
         android:src="@drawable/incendie"
-        android:textColor="@android:color/background_light"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/gaz"
-        style="@android:style/Widget.Holo.Light.ImageButton"
         android:layout_width="127dp"
         android:layout_height="170dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="196dp"
-
+        android:layout_marginTop="200dp"
+        android:background="@null"
         android:onClick="onClickGaz"
         android:src="@drawable/gaz"
-        android:textColor="@android:color/background_light"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/malaise"
-        style="@android:style/Widget.Holo.Light.ImageButton"
         android:layout_width="127dp"
         android:layout_height="150dp"
         android:layout_marginStart="208dp"
-        android:layout_marginTop="36dp"
-
+        android:layout_marginTop="50dp"
+        android:background="@null"
         android:onClick="onClickMalaise"
         android:src="@drawable/malaise"
-        android:textColor="@android:color/background_light"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/vol"
-        style="@android:style/Widget.Holo.Light.ImageButton"
         android:layout_width="127dp"
         android:layout_height="150dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="376dp"
-
+        android:background="@null"
         android:onClick="onClickVol"
         android:src="@drawable/vol"
-        android:textColor="@android:color/background_light"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
