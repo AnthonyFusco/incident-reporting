@@ -14,7 +14,7 @@ public class NormalReportPart1Activity extends MenuBaseActivity {
     }
 
     public void onClickNext(View view){
-        Intent intent = new Intent(this, NormalReportPart3Activity.class);
+        Intent intent = new Intent(this, NormalReportPart2Activity.class);
         startActivity(intent);
         finish();
     }

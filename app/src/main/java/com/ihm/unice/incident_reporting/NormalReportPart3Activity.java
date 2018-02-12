@@ -27,18 +27,14 @@ public class NormalReportPart3Activity extends MenuBaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.normal_report_piece);
+        setContentView(R.layout.normal_report_who);
 
         listView = findViewById(R.id.litViewNormalListUsers);
         List<ParametersUser> dataModels = repository.getAllUsersSelectNormal();
         CustomAdapter<ParametersUser> adapterListUsers = new ParametersListUsersAdapter(dataModels, getApplicationContext());
         listView.setAdapter(adapterListUsers);
 
-        Spinner spinnerPieces = findViewById(R.id.pieces);
-        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,
-                R.array.type_pieces, android.R.layout.simple_spinner_item);
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerPieces.setAdapter(adapter2);
+
         setTitle("Informations supplémentaires");
     }
 
@@ -47,7 +43,7 @@ public class NormalReportPart3Activity extends MenuBaseActivity {
             Intent intent = new Intent(this, MainActivity.class);
             intent.putExtra("toast", true);
             MainActivity.addIncident(new Incident(new User("Danièle"), new Date(),
-                    ((Spinner) findViewById(R.id.pieces)).getSelectedItem().toString()));
+                    ""));
             startActivity(intent);
             finish();
         } else {

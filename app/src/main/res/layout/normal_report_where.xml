@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="93dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/armoire"
+        android:onClick="onClickNext"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="93dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/chambre"
+        android:onClick="onClickNext"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="93dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cuisine"
+        android:onClick="onClickNext"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="93dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="144dp"
+        android:background="@drawable/entree"
+        android:onClick="onClickNext"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="93dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="268dp"
+        android:background="@drawable/manger"
+        android:onClick="onClickNext"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="93dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="144dp"
+        android:background="@drawable/jeux"
+        android:onClick="onClickNext"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="93dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="144dp"
+        android:background="@drawable/bain"
+        android:onClick="onClickNext"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        style="@android:style/Widget.Holo.Light.ImageButton"
+        android:layout_width="93dp"
+        android:layout_height="106dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="268dp"
+        android:background="@drawable/salon"
+        android:onClick="onClickNext"
+        android:textColor="@android:color/background_light"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
