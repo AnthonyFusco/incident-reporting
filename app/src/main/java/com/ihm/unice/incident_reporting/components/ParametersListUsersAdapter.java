@@ -3,6 +3,7 @@ package com.ihm.unice.incident_reporting.components;
 import android.content.Context;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import com.ihm.unice.incident_reporting.R;
@@ -21,9 +22,16 @@ public class ParametersListUsersAdapter extends CustomAdapter<ParametersUser> {
     }
 
     @Override
-    public void populateViewHolder(Map<String, View> viewHolder, ParametersUser dataModel) {
+    public void populateViewHolder(Map<String, View> viewHolder, final ParametersUser dataModel) {
         ((TextView)viewHolder.get(NAME)).setText(dataModel.getUser().getName());
         ((CheckBox)viewHolder.get(CHECKBOX)).setChecked(dataModel.isSelected());
+
+        ((CheckBox)viewHolder.get(CHECKBOX)).setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                dataModel.setSelected(b);
+            }
+        });
     }
 
     @Override

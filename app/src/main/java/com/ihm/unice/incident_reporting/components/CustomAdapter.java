@@ -45,6 +45,10 @@ public abstract class CustomAdapter<T> extends ArrayAdapter<T> {
         return convertView;
     }
 
+    public List<T> getDataList() {
+        return dataList;
+    }
+
     public abstract void populateViewHolder(Map<String, View> viewHolder, T dataModel);
     public abstract void configureViewHolder(Map<String, View> viewHolder, View convertView);
 }

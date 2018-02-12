@@ -18,4 +18,8 @@ public class ParametersUser {
     public User getUser() {
         return user;
     }
+
+    public void setSelected(boolean selected) {
+        this.isSelected = selected;
+    }
 }
