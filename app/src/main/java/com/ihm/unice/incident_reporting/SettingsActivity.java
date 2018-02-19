@@ -135,6 +135,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
             //fra = (CheckBoxPreference) findPreference("checkBoxFrancois");
             //lyd = (CheckBoxPreference) findPreference("checkBoxLydie");
             //editText = (EditTextPreference) findPreference("vv");
+            final EditText input = new EditText(getActivity());
             switchPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object o) {
@@ -142,7 +143,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                     builder.setTitle("Qui appeler ?");
 
-                    final EditText input = new EditText(getActivity());
+
                     input.setHint("Entrez le numéro à appeler");
 
                     input.setInputType(InputType.TYPE_CLASS_NUMBER);
