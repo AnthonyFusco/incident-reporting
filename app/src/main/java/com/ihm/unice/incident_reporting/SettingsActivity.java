@@ -24,6 +24,7 @@ import android.support.v7.app.AlertDialog;
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.MenuItem;
+import android.view.WindowManager;
 import android.widget.EditText;
 
 import com.ihm.unice.incident_reporting.models.UrgentType;
@@ -90,10 +91,9 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     }
 
     private void setupActionBar() {
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            // Show the Up button in the action bar.
-            actionBar.setDisplayHomeAsUpEnabled(true);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+            getSupportActionBar().setDisplayShowHomeEnabled(false);
         }
     }
 
@@ -148,6 +148,7 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                     input.setInputType(InputType.TYPE_CLASS_NUMBER);
                     builder.setView(input);
 
+
                     builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
@@ -162,6 +163,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
                         }
                     });
                     builder.show();
+                    input.requestFocus();
+
                     return true;
                 }
             });
@@ -191,36 +194,5 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
 
         }
 
-        /*private void writePreferences(String key) {
-            Set<String> users = new HashSet<>();
-            if (fra.isChecked()) users.add("Francois");
-            if (mat.isChecked()) users.add("Matthieu");
-            if (lyd.isChecked()) users.add("Lydie");
-            System.out.println(users);
-            SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-            sharedPref.edit().putStringSet("users" + key, users).apply();
-
-            sharedPref.edit().putBoolean("custom" + key, switchPreference.isChecked()).apply();
-            //sharedPref.edit().putString("number" + key, editText.getText()).apply();
-        }
-
-        private void setUIWithSharedPreferences(String type) {
-            SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
-
-            boolean isChecked = sharedPref.getBoolean("custom" + type, false);
-            switchPreference.setChecked(isChecked);
-            //editText.setText(sharedPref.getString("number" + type, ""));
-            Set<String> users = sharedPref.getStringSet("users" + type, new HashSet<String>());
-            for (String user : users) {
-                ((CheckBoxPreference) findPreference("checkBox" + user)).setChecked(true);
-            }
-        }*/
-
-        /*@Override
-        public void onPause() {
-            System.out.println("save ");
-            writePreferences(getArguments().getString("type"));
-            super.onPause();
-        }*/
     }
 }
