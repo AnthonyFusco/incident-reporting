@@ -14,7 +14,10 @@
     <item
         android:id="@+id/parameter_menu_item"
         android:enabled="true"
-        android:title="Paramètre"
+        android:title=""
+        android:icon="@drawable/settings3"
+
+        app:showAsAction="ifRoom"
         android:onClick="onClickParametersUrgentIncident"
         android:visible="true" />
 
@@ -25,3 +28,4 @@
         android:title="Désactiver les notifications"
         android:visible="true" />
 </menu>
+

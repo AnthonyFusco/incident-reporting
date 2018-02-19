@@ -1,0 +1,30 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- These settings headers are only used on tablets. -->
+
+    <header
+        android:fragment="com.ihm.unice.incident_reporting.SettingsActivity$PrefsUrgentCategory"
+        android:icon="@drawable/iconincendie"
+        android:title="Incendie" />
+
+    <header
+        android:fragment="com.ihm.unice.incident_reporting.SettingsActivity$PrefsUrgentCategory"
+        android:icon="@drawable/iconvol"
+        android:title="Vol" />
+
+    <header
+        android:fragment="com.ihm.unice.incident_reporting.SettingsActivity$PrefsUrgentCategory"
+        android:icon="@drawable/iconfuite"
+        android:title="Inondation" />
+
+    <header
+        android:fragment="com.ihm.unice.incident_reporting.SettingsActivity$PrefsUrgentCategory"
+        android:icon="@drawable/iconmalaise"
+        android:title="Malaise" />
+
+    <header
+        android:fragment="com.ihm.unice.incident_reporting.SettingsActivity$PrefsUrgentCategory"
+        android:icon="@drawable/icongaz"
+        android:title="Fuite de gaz" />
+
+</preference-headers>

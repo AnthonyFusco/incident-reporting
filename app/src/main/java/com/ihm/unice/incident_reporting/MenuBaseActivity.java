@@ -8,10 +8,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
-/**
- * Created by afusco on 08/01/18!
- */
 public abstract class MenuBaseActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +20,7 @@ public abstract class MenuBaseActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.settings, menu);
+
         return true;
     }
 
@@ -41,7 +40,7 @@ public abstract class MenuBaseActivity extends AppCompatActivity {
     }
 
     public void onClickParametersUrgentIncident(MenuItem item) {
-        Intent intent = new Intent(this, MyParametersActivity.class);
+        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 

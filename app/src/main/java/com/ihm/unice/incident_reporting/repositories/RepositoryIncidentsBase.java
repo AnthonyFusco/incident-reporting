@@ -26,11 +26,11 @@ public class RepositoryIncidentsBase implements IncidentsRepository{
     }
 
     private static List<UrgentType> urgentTypes = Arrays.asList(
-            new UrgentType("Fuite de gaz"),
-            new UrgentType("Innondation"),
-            new UrgentType("Malaise"),
-            new UrgentType("Incendie"),
-            new UrgentType("Vol")
+            new UrgentType("Fuite de gaz",0),
+            new UrgentType("Innondation",0),
+            new UrgentType("Malaise",2),
+            new UrgentType("Incendie",0),
+            new UrgentType("Vol",1)
     );
 
     RepositoryIncidentsBase(){

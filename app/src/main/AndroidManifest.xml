@@ -11,38 +11,49 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:screenOrientation="portrait"
-            android:launchMode="singleInstance">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".UrgentReportActivity"
+        <activity
+            android:name=".UrgentReportActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NormalReportActivity"
+            android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity">
-        </activity>
-
-        <activity android:name=".NormalReportActivity"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".MyParametersActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConfirmIncidentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NormalReportPart1Activity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NormalReportPart2Activity"
+            android:parentActivityName=".NormalReportPart1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NormalReportPart3Activity"
+            android:parentActivityName=".NormalReportPart2Activity"
             android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity">
-        </activity>
-
-        <activity android:name=".MyParametersActivity"
-            android:screenOrientation="portrait"
-            android:parentActivityName=".MainActivity">
-        </activity>
-        <activity android:name=".ConfirmIncidentActivity"
-            android:screenOrientation="portrait" >
-        </activity>
-        <activity android:name=".NormalReportPart1Activity" android:parentActivityName=".MainActivity">
-        </activity>
-        <activity android:name=".NormalReportPart2Activity" android:parentActivityName=".NormalReportPart1Activity">
-        </activity>
-        <activity android:name=".NormalReportPart3Activity" android:parentActivityName=".NormalReportPart2Activity">
-        </activity>
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/title_activity_settings" />
     </application>
 
 </manifest>

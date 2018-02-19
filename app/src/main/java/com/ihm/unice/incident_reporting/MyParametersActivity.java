@@ -14,7 +14,10 @@ import android.preference.SwitchPreference;
 import android.support.v7.app.AlertDialog;
 import android.text.InputType;
 import android.util.ArraySet;
+import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.ihm.unice.incident_reporting.models.UrgentType;
 import com.ihm.unice.incident_reporting.repositories.IncidentsRepository;
@@ -36,15 +39,17 @@ public class MyParametersActivity extends PreferenceActivity {
 
     @Override
     public void onBuildHeaders(List<Header> target) {
+
         for (UrgentType urgentType : repository.getUrgentTypes()) {
             Header header = new Header();
-            header.title = "Paramètres de l'incident " + urgentType.getName();
-            header.summary = "Affichez/Modifiez les paramètres de l'incident " + urgentType.getName();
+            header.title = urgentType.getName();
+            header.summary = "Modifiez les paramètres pour " + urgentType.getName();
             header.fragment = PrefsUrgentCategory.class.getName();
 
             Bundle b = new Bundle();
             b.putString("type", urgentType.getName().substring(0,2));
             header.fragmentArguments = b;
+            b.putSerializable("obj", urgentType);
             target.add(header);
         }
 
@@ -96,8 +101,11 @@ public class MyParametersActivity extends PreferenceActivity {
                 }
             });
 
-
+            UrgentType urgentType = (UrgentType) getArguments().getSerializable("obj");
+            ListPreference list = (ListPreference) findPreference("language_preference");
+            list.setValueIndex(urgentType != null ? urgentType.getBaseNumber() : 0);
             setUIWithSharedPreferences(getArguments().getString("type"));
+
         }
 
         private void writePreferences(String key) {

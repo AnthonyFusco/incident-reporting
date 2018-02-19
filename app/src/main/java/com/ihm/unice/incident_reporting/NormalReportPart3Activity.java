@@ -43,7 +43,7 @@ public class NormalReportPart3Activity extends MenuBaseActivity {
             Intent intent = new Intent(this, MainActivity.class);
             intent.putExtra("toast", true);
             MainActivity.addIncident(new Incident(new User("Danièle"), new Date(),
-                    ""));
+                    NormalReportPart1Activity.type));
             startActivity(intent);
             finish();
         } else {
